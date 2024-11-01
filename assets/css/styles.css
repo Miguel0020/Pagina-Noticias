@@ -21,11 +21,10 @@ main {
     margin: 20px;
 }
 
-/* Estilo para las noticias recientes */
 .noticias-recientes {
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap; /* Permite que los artículos se reorganicen en pantallas pequeñas */
+    flex-wrap: wrap; 
     margin-bottom: 20px;
 }
 
@@ -33,7 +32,7 @@ main {
     background-color: rgb(201, 205, 207);
     padding: 10px;
     box-shadow: 0 0 10px rgba(182, 20, 214, 0.712);
-    width: 45%; /* Ajustamos el ancho al 45% para pantallas grandes */
+    width: 45%; 
     margin-bottom: 20px;
 }
 
@@ -49,44 +48,32 @@ main {
     text-align: center;
 }
 
-/* Media Queries para pantallas medianas (tabletas) */
-@media only screen and (max-width: 992px) {
-    .noticia {
-        width: 45%; /* Sigue ocupando el 45%, pero flex-wrap permite que cambien de fila */
-    }
 
-    .contacto p {
-        font-size: 1rem; /* Ajusta el tamaño de la fuente en pantallas medianas */
-    }
-}
-
-/* Media Queries para pantallas pequeñas (móviles) */
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .noticia {
-        width: 100%; /* Cada noticia ocupará el 100% del ancho en pantallas pequeñas */
+        width: 100%; 
     }
 
     header img {
-        width: 50%; /* Reducción del logo en pantallas más pequeñas */
+        width: 50%; 
     }
 
     main {
-        margin: 10px; /* Reducción de márgenes para pantallas pequeñas */
+        margin: 10px; 
     }
 }
 
-/* Media Queries para pantallas muy pequeñas (teléfonos) */
-@media only screen and (max-width: 480px) {
+@media (max-width: 480px) {
     header img {
-        width: 70%; /* Logo aún más pequeño en pantallas muy pequeñas */
+        width: 70%; 
     }
 
     .noticia {
         box-shadow: none;
-        padding: 5px; /* Reducción de padding para móviles */
+        padding: 5px; 
     }
 
     .contacto p {
-        font-size: 0.9rem; /* Reducción del tamaño de la fuente en contacto */
+        font-size: 0.9rem; 
     }
 }

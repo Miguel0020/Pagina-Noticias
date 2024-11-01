@@ -1,0 +1,92 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    margin: 20px;
+}
+
+/* Estilo para las noticias recientes */
+.noticias-recientes {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Permite que los artículos se reorganicen en pantallas pequeñas */
+    margin-bottom: 20px;
+}
+
+.noticia {
+    background-color: rgb(201, 205, 207);
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(182, 20, 214, 0.712);
+    width: 45%; /* Ajustamos el ancho al 45% para pantallas grandes */
+    margin-bottom: 20px;
+}
+
+.noticia img {
+    width: 100%;
+    height: auto;
+}
+
+.contacto {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Media Queries para pantallas medianas (tabletas) */
+@media only screen and (max-width: 992px) {
+    .noticia {
+        width: 45%; /* Sigue ocupando el 45%, pero flex-wrap permite que cambien de fila */
+    }
+
+    .contacto p {
+        font-size: 1rem; /* Ajusta el tamaño de la fuente en pantallas medianas */
+    }
+}
+
+/* Media Queries para pantallas pequeñas (móviles) */
+@media only screen and (max-width: 768px) {
+    .noticia {
+        width: 100%; /* Cada noticia ocupará el 100% del ancho en pantallas pequeñas */
+    }
+
+    header img {
+        width: 50%; /* Reducción del logo en pantallas más pequeñas */
+    }
+
+    main {
+        margin: 10px; /* Reducción de márgenes para pantallas pequeñas */
+    }
+}
+
+/* Media Queries para pantallas muy pequeñas (teléfonos) */
+@media only screen and (max-width: 480px) {
+    header img {
+        width: 70%; /* Logo aún más pequeño en pantallas muy pequeñas */
+    }
+
+    .noticia {
+        box-shadow: none;
+        padding: 5px; /* Reducción de padding para móviles */
+    }
+
+    .contacto p {
+        font-size: 0.9rem; /* Reducción del tamaño de la fuente en contacto */
+    }
+}
